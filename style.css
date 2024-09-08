@@ -27,52 +27,63 @@ h1, section {
     box-shadow: 5px 5px 8px rgb(71, 136, 211);
 }
 
-.resume-header h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 2rem;
-    cursor: text; /* Make it clear it's editable */
+.generate-link {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
 }
 
-.resume-info {
+.generate-link {
+    top: 1rem;
+    right: 32rem;
+    margin-right: 2rem;
+}
+
+.theme-switcher, .download-resume, .share-resume, .generate-link {
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.resume-link-container {
+    width: 70%; 
+    margin-top: 1.5rem;
+    margin-left: 2rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
-    padding: 1rem;
-    background: #f9f9f9;
-    border-radius: 0.25rem;
+    justify-content: center;
+    gap: 1rem;
 }
 
-.resume-info input[type="text"] {
-    width: 80%;
-    margin-bottom: 1rem;
+#resumeLink {
+    width: 100%;
     padding: 0.5rem;
-    font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 0.25rem;
+    font-size: 1rem;
+    margin-right: 1rem;
 }
 
-.resume-info button {
-    margin: 0.5rem;
-    padding: 0.5rem 1.5rem;
+.resume-link-container button {
+    padding: 0.625rem 1.25rem;
     font-size: 1rem;
     border: none;
-    border-radius: 0.25rem;
-    background-color: #4CAF50;
+    border-radius: 0.3125rem;
+    background-color: var(--primary-color);
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.resume-info button:hover {
-    background-color: #45a049;
+body.theme-dark .generate-link {
+    background: #cf6ab1;
 }
 
-.resume-info button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+body.theme-dark .resume-link-container button {
+    background-color: #cf6ab1;
 }
 
 .header {
@@ -90,6 +101,9 @@ h1, section {
 }
 
 .btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
     margin-bottom: 3rem;
 }
 
@@ -97,11 +111,14 @@ h1, section {
     background: var(--primary-color);
     color: #fff;
     border: none;
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 1.25rem;
     border-radius: 0.3125rem;
     cursor: pointer;
-    position: absolute;
     z-index: 10;
+}
+
+h1, section, #downloadResume, #shareResume, #themeSwitcher, .resume-link-container button{
+    box-shadow: 5px 5px 8px rgb(60, 166, 236);
 }
 
 .theme-switcher {
@@ -262,7 +279,7 @@ body.theme-dark header p {
     color: #fff;
 }
 
-body.theme-dark h1, body.theme-dark section {
+body.theme-dark h1, body.theme-dark section, body.theme-dark #downloadResume, body.theme-dark #shareResume, body.theme-dark #themeSwitcher, body.theme-dark .resume-link-container button {
     box-shadow: 5px 5px 8px rgb(209, 145, 193);
 }
 
@@ -286,13 +303,8 @@ body.theme-dark h1, body.theme-dark section {
     }
 
     li {
-        width: 100%;
+        width: 90%;
         max-width: none;
-    }
-
-    .theme-switcher, .download-resume {
-        position: static; /* Adjust buttons on smaller screens */
-        margin: 1rem auto;
     }
 }
 
@@ -305,17 +317,31 @@ body.theme-dark h1, body.theme-dark section {
         font-size: 1rem;
     }
 
-    img {
-        width: 10rem;
-        height: 10rem;
-    }
-
     h2 {
         font-size: 1.25rem;
     }
 
     h3 {
         font-size: 1rem;
+    }
+
+    section {
+        width: 87%;
+    }
+
+    li {
+        width: 70%;
+    }
+
+    #resumeLink {
+        width: 100%;
+    }
+
+    .btn {
+        flex-direction: column;
+        align-items: center;
+        width: 4rem;
+        gap: 0;
     }
 }
 
@@ -326,12 +352,13 @@ body.theme-dark h1, body.theme-dark section {
         font-size: 12pt; 
     }
 
-    .theme-switcher, .download-resume {
-        display: none; /* Hide buttons during print */
+    .theme-switcher, .download-resume, .share-resume, .generate-link, 
+    #resumeLink, .resume-link-container {
+        display: none !important; 
     }
 
     .resume-container {
-        box-shadow: none; /* Remove shadow for cleaner print */
+        box-shadow: none; 
         margin: 0;
         padding: 0; 
         width: 100%;
@@ -347,7 +374,7 @@ body.theme-dark h1, body.theme-dark section {
     section {
         margin: 0;
         padding: 0;
-        page-break-inside: avoid; /* Prevent breaking inside sections */
+        page-break-inside: avoid;
     }
 
     h3 {
@@ -360,7 +387,6 @@ body.theme-dark h1, body.theme-dark section {
     }
 
     .resume-content {
-        display: block;
+        display: block;
     }
-
 }

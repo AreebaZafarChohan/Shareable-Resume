@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editable Resume Builder</title>
+    <title>Shareable Resume Builder</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Share Section for Resume Link -->
-    <section class="resume-info">
+    <div class="resume-link-container">
         <button id="generateLink">Generate Unique URL</button>
         <input type="text" id="resumeLink" readonly placeholder="Generated URL will appear here">
-
-    </section>
+    </div>
 
     <div class="btn">
         <button class="share-resume" id="shareResume">Share Resume</button>
@@ -22,7 +21,7 @@
 
     <div class="resume-container">
         <header class="header">
-            <h1 id="name" contenteditable="true" id="userName">Areeba Zafar</h1>
+            <h1 id="name" contenteditable="true">Areeba Zafar</h1>
             <p id="title" contenteditable="true">Front-end Developer | Karachi, Pakistan</p>
         </header>
 
