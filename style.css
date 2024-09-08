@@ -1,0 +1,366 @@
+:root {
+    --primary-color: #007BFF;
+    --background-color: #ffffff;
+    --text-color: #333;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: serif;
+    font-family: 600;
+    padding: 1.25rem;
+    position: relative;
+    text-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+.resume-container {
+    max-width: 75rem;
+    margin: auto;
+    background: var(--background-color);
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+h1, section {
+    box-shadow: 5px 5px 8px rgb(71, 136, 211);
+}
+
+.resume-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2rem;
+    cursor: text; /* Make it clear it's editable */
+}
+
+.resume-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 0.25rem;
+}
+
+.resume-info input[type="text"] {
+    width: 80%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+.resume-info button {
+    margin: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.resume-info button:hover {
+    background-color: #45a049;
+}
+
+.resume-info button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 1.875rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.header p {
+    font-size: 1.2rem;
+}
+
+.btn{
+    margin-bottom: 3rem;
+}
+
+.theme-switcher, .download-resume, .share-resume {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+}
+
+.theme-switcher {
+    top: 1rem;
+    right: 1rem;
+    margin-right: 2rem;
+}
+
+.download-resume {
+    top: 1rem;
+    right: 10rem;
+    margin-right: 2rem; 
+}
+
+.share-resume {
+    top: 1rem;
+    right: 21rem;
+    margin-right: 2rem; 
+}
+
+.resume-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.left-side, .right-side {
+    flex: 1;
+}
+
+.left-side {
+    padding-right: 1.25rem;
+}
+
+.right-side {
+    padding-left: 1.25rem;
+    border-left: 0.0625rem solid #ccc;
+}
+
+section {
+    margin-bottom: 1.875rem;
+    padding: 0.625rem;
+    background: #f9f9f9;
+    border-radius: 0.25rem;
+}
+
+h2 {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.9375rem;
+    border-radius: 0.25rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.9375rem;
+}
+
+p {
+    margin-bottom: 0.9375rem;
+    font-size: 1.2rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.edu-item, .exp-item, .project-item {
+    margin-bottom: 1.25rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.625rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul li {
+    background: #e9ecef;
+    margin: 0.7rem 0;
+    padding: 0.625rem;
+    border-radius: 0.25rem;
+    width: 95%;
+    text-align: center;
+    box-shadow: 5px 5px 8px rgba(83, 97, 109, 0.87);
+}
+
+.footer {
+    text-align: center;
+    padding: 0.9375rem;
+    border-top: 0.0625rem solid #ccc;
+    margin-top: 1.875rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: serif;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+    margin: 0 0.75rem;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.theme-light {
+    --primary-color: #007BFF;
+    --background-color: #ffffff;
+    --text-color: #050404;
+}
+
+.theme-dark {
+    --primary-color: #cf6ab1;
+    --background-color: #222;
+    --text-color: #000000;
+}
+
+body.theme-dark {
+    background-color: #3b3333;
+    color: #070505;
+}
+
+body.theme-dark .resume-container {
+    background: #443d3d;
+    box-shadow: 0 0 0.9375rem rgba(0, 0, 0, 0.5);
+}
+
+body.theme-dark h2, body.theme-dark h3 {
+    color: #0a0707;
+}
+
+body.theme-dark a {
+    color: #e910a8;
+}
+
+body.theme-dark footer a {
+    color: #cf6ab1;
+}
+
+body.theme-dark p, body.theme-dark ul li {
+    color: #080707;
+}
+
+body.theme-dark header p {
+    color: #fff;
+}
+
+body.theme-dark h1, body.theme-dark section {
+    box-shadow: 5px 5px 8px rgb(209, 145, 193);
+}
+
+@media (max-width: 768px) {
+    .resume-content {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .left-side, .right-side {
+        padding: 0;
+        border-left: none;
+    }
+
+    .right-side {
+        border-top: 0.0625rem solid #ccc;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    li {
+        width: 100%;
+        max-width: none;
+    }
+
+    .theme-switcher, .download-resume {
+        position: static; /* Adjust buttons on smaller screens */
+        margin: 1rem auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 12pt; 
+    }
+
+    .theme-switcher, .download-resume {
+        display: none; /* Hide buttons during print */
+    }
+
+    .resume-container {
+        box-shadow: none; /* Remove shadow for cleaner print */
+        margin: 0;
+        padding: 0; 
+        width: 100%;
+        max-width: none; 
+        background: var(--background-color);
+        color: var(--text-color);
+    }
+
+    .header h1 {
+        color: var(--primary-color);
+    }
+
+    section {
+        margin: 0;
+        padding: 0;
+        page-break-inside: avoid; /* Prevent breaking inside sections */
+    }
+
+    h3 {
+        color: #333;
+    }
+    
+    h2 {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    .resume-content {
+        display: block;
+    }
+
+}
