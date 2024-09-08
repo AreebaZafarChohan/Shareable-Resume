@@ -70,7 +70,6 @@ function saveContent() {
     });
   });
 
-  // main.ts
 document.addEventListener('DOMContentLoaded', () => {
     const editableElements = document.querySelectorAll('[contenteditable="true"]');
   
