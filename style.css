@@ -306,6 +306,13 @@ body.theme-dark h1, body.theme-dark section, body.theme-dark #downloadResume, bo
         width: 90%;
         max-width: none;
     }
+
+    .resume-link-container {
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -340,8 +347,13 @@ body.theme-dark h1, body.theme-dark section, body.theme-dark #downloadResume, bo
     .btn {
         flex-direction: column;
         align-items: center;
-        width: 4rem;
         gap: 0;
+    }
+
+    .resume-link-container {
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
     }
 }
 
@@ -387,6 +399,6 @@ body.theme-dark h1, body.theme-dark section, body.theme-dark #downloadResume, bo
     }
 
     .resume-content {
-        display: block;
+        display: block;
     }
 }
