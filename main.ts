@@ -1,3 +1,13 @@
+// Selecting the hamburger menu, navbar, and nav links
+const hamburger = document.querySelector('.hamburger') as HTMLElement | null;
+const navMenu = document.querySelector('nav ul') as HTMLElement | null;
+
+// Toggle class on click for responsive navigation
+hamburger?.addEventListener('click', () => {
+  navMenu?.classList.toggle('active');
+}); 
+
+
 document.addEventListener("DOMContentLoaded", () => {
   // Function to save content to localStorage
   function saveContent() {
