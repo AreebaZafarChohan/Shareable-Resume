@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var userName = (_a = document.getElementById('userName').textContent) === null || _a === void 0 ? void 0 : _a.trim();
         if (userName) {
             // Create a unique URL based on the user’s name
-            var resumeUrl = "".concat(window.location.origin, "/resume/").concat(encodeURIComponent(userName));
+            var resumeUrl = "".concat(window.location.origin).concat(encodeURIComponent(userName));
             document.getElementById('resumeLink').value = resumeUrl;
         }
         else {

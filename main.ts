@@ -135,7 +135,7 @@ document.getElementById("downloadResume")?.addEventListener("click", () => {
               let userName = (document.getElementById('userName') as HTMLElement).textContent?.trim();
               if (userName) {
                   // Create a unique URL based on the user’s name
-                  const resumeUrl = `${window.location.origin}/resume/${encodeURIComponent(userName)}`;
+                  const resumeUrl = `${window.location.origin}${encodeURIComponent(userName)}`;
                   (document.getElementById('resumeLink') as HTMLInputElement).value = resumeUrl;
               } else {
                   alert('Please enter your name');
