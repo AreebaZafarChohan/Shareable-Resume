@@ -113,6 +113,20 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+function saveContent() {
+    var _a;
+    var userNameElement = document.getElementById('userName');
+    var userName = (_a = userNameElement.textContent) === null || _a === void 0 ? void 0 : _a.trim();
+    var editableElements = document.querySelectorAll('[contenteditable="true"]');
+    if (userName) {
+        // Combine all editable content and save in localStorage
+        var content = Array.from(editableElements).map(function (el) { return el.innerHTML; }).join('');
+        localStorage.setItem(userName, JSON.stringify(content));
+    }
+    else {
+        alert('Please enter your name before saving.');
+    }
+}
 // Share Resume button to copy the unique link
 (_f = document.getElementById('shareResume')) === null || _f === void 0 ? void 0 : _f.addEventListener('click', function () {
     var resumeLink = document.getElementById('resumeLink').value;

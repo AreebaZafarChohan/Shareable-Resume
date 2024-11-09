@@ -142,6 +142,20 @@ document.getElementById("downloadResume")?.addEventListener("click", () => {
              }
           });
       });
+
+      function saveContent(): void {
+        const userNameElement = document.getElementById('userName') as HTMLElement;
+        const userName = userNameElement.textContent?.trim();
+        const editableElements = document.querySelectorAll('[contenteditable="true"]');
+        
+        if (userName) {
+            // Combine all editable content and save in localStorage
+            const content = Array.from(editableElements).map(el => el.innerHTML).join('');
+            localStorage.setItem(userName, JSON.stringify(content));
+        } else {
+            alert('Please enter your name before saving.');
+        }
+    }
       
       // Share Resume button to copy the unique link
       document.getElementById('shareResume')?.addEventListener('click', () => {
