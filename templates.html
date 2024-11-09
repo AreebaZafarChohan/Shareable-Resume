@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="template.css">
+    <title>Dynamic Resume Builder</title>
+</head>
+<body>
+    <header class="header">
+        <div class="resume-icon"></div>
+        <h2 class="resume-icon-text"><span>Quick</span>CV</h2>
+        <nav>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="templates.html">Templates</a></li>
+                    <li><a href="cvGenerator.html">Generate CV</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+       <section class="template-section">
+        <div>
+            <h2>Why is QuickCV Creator the best resume builder online?</h2>
+            <h1>Select Your Resume Template</h1>
+        </div>
+        <div id="template-selection">
+            <div class="template-option" data-template="template1">
+                <img src="images/template3.png" alt="Template 1">
+               <div class="ok-btn">
+                <p>Template 1</p>
+                <a href="cvGenerator.html"><button class="selected-option" id="template1">Selected</button></a>
+            </div>
+            </div>
+            <div class="template-option " data-template="template2">
+                <img src="images/template2.jpg" class="locked" alt="Template 2">
+                <div class="ok-btn">
+                    <p>Template 2</p>
+                    <a href="cvGenerator.html"><button class="selected-option" id="template2">Selected</button></a>
+                </div>
+                <h3 class="locked-p">Locked</h3>
+            </div>
+            <div class="template-option " data-template="template3">
+                <img src="images/template1.png" class="locked" alt="Template 3">
+                <div class="ok-btn">
+                    <p>Template 3</p>
+                    <a href="cvGenerator.html"><button class="selected-option" id="template3">Selected</button></a>
+                </div>
+                <h3 class="locked-p">Locked</h3>
+            </div>
+        </div>
+       </section>
+    
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Social Networks Section -->
+            <div class="footer-section social-networks">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://github.com/AreebaZafarChohan/portfolio-next.js.git" target="_blank">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/areeba-zafar-973917303/?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging_conversation_detail%3BoBeXsi05TJelFMCv%2FLg3Hw%3D%3D" target="_blank">LinkedIn</a></li>
+                    <li><a href="mailto:areebazafar715@gmail.com" target="_blank">Email</a></li>
+                </ul>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="templates.html">Templates</a></li>
+                    <li><a href="cvGenerator.html">Generate CV</a></li>
+                </ul>
+            </div>
+    
+            <!-- Additional Information Section -->
+            <div class="footer-section additional-info">
+                <h3>Additional Information</h3>
+                <ul>
+                    <li> <a href="#benefits">Benefits of Using QuickCV</a></li>
+                    <li> <a href="#how-it-works">How It Works</a></li>
+                    <li>  <a href="#why-choose-us">Why Choose Us</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 QuickCV | All rights reserved.</p>
+        </div>
+    </footer>
+     <script src="main.js"></script>
+</body>
+</html>

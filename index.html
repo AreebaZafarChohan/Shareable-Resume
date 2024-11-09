@@ -3,115 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shareable Resume Builder</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Dynamic Resume Builder</title>
 </head>
 <body>
-    <!-- Share Section for Resume Link -->
-    <div class="resume-link-container">
-        <button id="generateLink">Generate Unique URL</button>
-        <input type="text" id="resumeLink" readonly placeholder="Generated URL will appear here">
-    </div>
-
-    <div class="btn">
-        <button class="share-resume" id="shareResume">Share Resume</button>
-        <button id="downloadResume" class="download-resume">Download Resume</button>
-    <button id="themeSwitcher" class="theme-switcher">Switch Theme</button>
-    </div>
-
-    <div class="resume-container">
-        <header class="header">
-            <h1 id="name" contenteditable="true">Areeba Zafar</h1>
-            <p id="title" contenteditable="true">Front-end Developer | Karachi, Pakistan</p>
-        </header>
-
-        <div class="resume-content">
-            <div class="left-side">
-                <section class="contact-info">
-                    <h2>Contact Information</h2>
-                    <p id="email" contenteditable="true">Email: <a href="">areebazafar715@example.com</a></p>
-                    <p id="phone" contenteditable="true">Phone: +92345677890</p>
-                    <p id="linkedin" contenteditable="true">LinkedIn: <a href="" target="_blank">LinkedIn Profile</a></p>
-                </section>
-
-                <section class="personal-info">
-                    <h2>Personal Information</h2>
-                    <p id="gender" contenteditable="true">Gender: Female</p>
-                    <p id="dob" contenteditable="true">Date-of-birth: 07-09-2004</p>
-                </section>
-
-                <section class="objective">
-                    <h2>Objective</h2>
-                    <p id="objective" contenteditable="true">Passionate front-end developer with experience in TypeScript, JavaScript, Tailwind CSS, and Bootstrap. Seeking to leverage my skills and contribute to a dynamic team.</p>
-                </section>
-
-                <section class="education">
-                    <h2>Education</h2>
-                    <ul id="education-list" class="education-list">
-                        <li>
-                            <h3 id="edu1" contenteditable="true">Intermediate in Commerce</h3>
-                            <p id="edu1-school" contenteditable="true">Government College for Women, Korangi 4, Karachi</p>
-                            <p id="edu1-year" contenteditable="true">2020 - 2022 | A+ Grade (80%)</p>
-                        </li>
-                        <li>
-                            <h3 id="edu2" contenteditable="true">Matriculation</h3>
-                            <p id="edu2-school" contenteditable="true">Little Citizen Secondary School</p>
-                            <p id="edu2-year" contenteditable="true">2018 - 2020 | A Grade (71%)</p>
-                        </li>l
-                    </ul>
-                </section>
+    <header class="header">
+        <div class="resume-icon"></div>
+        <h2 class="resume-icon-text"><span>Quick</span>CV</h2>
+        <nav>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
+            <div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="templates.html">Templates</a></li>
+                    <li><a href="cvGenerator.html">Generate CV</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-            <div class="right-side">
-                <section class="skills">
-                    <h2>Skills</h2>
-                    <ul id="skills-list">
-                        <li id="skill1" contenteditable="true">TypeScript</li>
-                        <li id="skill2" contenteditable="true">JavaScript</li>
-                        <li id="skill3" contenteditable="true">Tailwind CSS</li>
-                        <li id="skill4" contenteditable="true">Bootstrap</li>
-                        <li id="skill5" contenteditable="true">Next.js</li>
-                        <li id="skill6" contenteditable="true">Responsive Web Design</li>
-                    </ul>
-                </section>
+    <main>
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <h5>Welcome to my <span>QuickCV </span>Generator</h5>
+            <p><span class="cv-sub-title">Create a Compelling CV</span> with QuickCV in minutes</p>
+            <p>Online resume builder</p>
+            <button><a href="templates.html">Get Started</a></button>
+        </section>
 
-                <section class="experience">
-                    <h2>Experience</h2>
-                    <div class="exp-item">
-                        <h3 id="exp-title" contenteditable="true">Front-end Developer Intern</h3>
-                        <p id="exp-company" contenteditable="true">XYZ Solutions, Karachi</p>
-                        <p id="exp-year" contenteditable="true">2023</p>
-                        <p id="exp-desc" contenteditable="true">Contributed to building responsive websites using JavaScript, Tailwind CSS, and Bootstrap.</p>
-                    </div>
-                    <br>
-                    <div class="exp-item">
-                        <h3 id="exp-title" contenteditable="true">Front-end Developer Intern</h3>
-                        <p id="exp-company" contenteditable="true">XYZ Solutions, Karachi</p>
-                        <p id="exp-year" contenteditable="true">2023</p>
-                        <p id="exp-desc" contenteditable="true">Contributed to building responsive websites using JavaScript, Tailwind CSS, and Bootstrap.</p>
-                    </div>
-                </section>
+        <!-- Benefits Section -->
+        <section class="benefits-section" id="benefits">
+            <div>
+                <img src="images/advantages2.jpg" alt="Benefits for using our resume">
+            </div>
+            <div>
+                <h3>Benefits of Using <span>QuickCV</span></h3>
+            <ul>
+                <li><span> ☆ Quick and Easy</span> <p>Build your resume in just a few minutes</p></li>
+                <li><span>☆ Professional Templates</span><p>Choose from a variety of stylish templates</p></li>
+                <li><span>☆ Customizable Content</span> <p>Personalize each section to match your style</p></li>
+                <li><span>☆ Downloadable and Printable</span><p>Get your resume in PDF format, ready to share</p></li>
+            </ul>
+            </div>
+        </section>
 
-                <section class="projects">
-                    <h2>Projects</h2>
-                    <ul id="projects-list">
-                        <li>
-                            <h3 id="project1" contenteditable="true">Portfolio Website</h3>
-                            <p id="project1-desc" contenteditable="true">A personal portfolio to showcase web development skills, built using Next.js and Tailwind CSS.</p>
-                        </li>
-                        <li>
-                            <h3 id="project2" contenteditable="true">E-commerce Website</h3>
-                            <p id="project2-desc" contenteditable="true">Developed a mock e-commerce platform with cart functionality using TypeScript, HTML, CSS, and JavaScript.</p>
-                        </li>
-                    </ul>
-                </section>
+        <!-- How It Works Section -->
+        <section class="how-it-works-section" id="how-it-works">
+            <h3>How It Works</h3>
+            <h4>Build your job-winning resume in four simple steps</h4>
+            <ol>
+                    <li>
+                        <h5>1</h5>
+                        <img src="images/getStarted.png" alt="Get Started"/>
+                        <strong>Get Started</strong> <p>Click the "Get Started" button to begin</p></li>
+                    <li>
+                        <h5>2</h5>
+                        <img src="images/template.png" alt="Choosing a Template"/>
+                        <strong>Choose a Template</strong><p>Select from multiple professional templates</p></li>
+                    <li>
+                        <h5>3</h5>
+                        <img src="images/form.png" alt="Filling the Form"/>
+                        <strong>Fill Out your Resume</strong> <p>Enter your details and let QuickCV generate a polished resume</p></li>
+                    <li>
+                        <h5>4</h5>
+                        <img src="images/download.png" alt="Download PDF"/>
+                        <strong>Download as PDF</strong><p>Download your resume as a PDF and apply for jobs with your polished resume</p></li>
+            </ol>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us-section" id="why-choose-us">
+            <div>
+                <h3>Why Choose <span>Us?</span></h3>
+            <ul>
+                <li><strong>Fast and Efficient:</strong> Generate your professional resume in just a few minutes.</li>
+                <li><strong>User-Friendly:</strong> Simple interface that makes resume building effortless, even for beginners.</li>
+                <li><strong>Variety of Templates:</strong> Choose from a range of modern and professional templates that suit your style.</li>
+                <li><strong>Completely Customizable:</strong> Personalize every section to reflect your unique skills and experience.</li>
+                <li><strong>Download in PDF:</strong> Get your polished resume in PDF format, ready to print or share.</li>
+                <li><strong>No Hidden Fees:</strong> Create and download your resume for free with no hidden charges.</li>
+                <li><strong>Safe and Secure:</strong> Your data is safe with us; we value your privacy and security.</li>
+                <li><strong>Save Time:</strong> No need to spend hours formatting your resume—focus on what really matters.</li>
+                <li><strong>Mobile Friendly:</strong> Build your resume on the go, directly from your smartphone or tablet.</li>
+            </ul>
+            </div>
+            <img src="images/whyUs.gif" alt="Why Choose Us">
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Social Networks Section -->
+            <div class="footer-section social-networks">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://github.com/AreebaZafarChohan/portfolio-next.js.git" target="_blank">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/areeba-zafar-973917303/?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging_conversation_detail%3BoBeXsi05TJelFMCv%2FLg3Hw%3D%3D" target="_blank">LinkedIn</a></li>
+                    <li><a href="mailto:areebazafar715@gmail.com" target="_blank">Email</a></li>
+                </ul>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="templates.html">Templates</a></li>
+                    <li><a href="cvGenerator.html">Generate CV</a></li>
+                </ul>
+            </div>
+    
+            <!-- Additional Information Section -->
+            <div class="footer-section additional-info">
+                <h3>Additional Information</h3>
+                <ul>
+                    <li> <a href="#benefits">Benefits of Using QuickCV</a></li>
+                    <li> <a href="#how-it-works">How It Works</a></li>
+                    <li>  <a href="#why-choose-us">Why Choose Us</a></li>
+                </ul>
             </div>
         </div>
-
-        <footer class="footer">
-            <p id="footer-info" contenteditable="true">Find me on<a href="" target="_blank">GitHub</a> | <a href="">Email</a></p>
-        </footer>
-    </div>
+    
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 QuickCV | All rights reserved.</p>
+        </div>
+    </footer>
+    
     <script src="main.js"></script>
 </body>
 </html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="resume-icon"></div>
+        <h2 class="resume-icon-text"><span>Quick</span>CV</h2>
+        <nav>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="templates.html">Templates</a></li>
+                    <li><a href="cvGenerator.html">Generate CV</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+         <!-- Share Section for Resume Link -->
+    <div class="resume-link-container">
+        <button id="generateLink" class="theme-switcher">Generate Unique URL</button>
+        <input type="text" id="resumeLink" readonly placeholder="Generated URL will appear here">
+    </div>
+
+    <div class="theme-switcher-btn">
+        <button class="theme-switcher" id="shareResume">Share Resume</button>
+        <button id="downloadResume" class="theme-switcher">Download Resume</button>
+    <button id="themeSwitcher" class="theme-switcher">Switch Theme</button>
+    </div>
+        <div class="resume-container">
+            <header class="cv-header">
+                <div class="heading-and-image">
+                    <div class="heading-and-text">
+                        <h1 contenteditable="true" id="userName">Areeba Zafar</h1>
+                        <p contenteditable="true">Front-end Developer | Karachi, Pakistan</p>
+                        <hr />
+                    </div>
+                    <!-- Profile Image Section -->
+                    <div class="profile-image">
+                        <img id="profileImage" src="images/profile.jpg" alt="profile image">
+                        <input type="file" id="imageUpload" style="display: none;" accept="image/*">
+                    </div>
+                </div>
+            </header>
+
+            <div class="resume-content">
+                <div class="left-side">
+
+                    <section class="objective">
+                        <div class="heading-style">
+                            <div class="empty"></div>
+                            <h2 contenteditable="true">In Brief </h2>
+                            <div class="dash">______________</div>
+                        </div>
+                        <p contenteditable="true">Passionate front-end developer with experience in TypeScript,
+                            JavaScript, Tailwind CSS, and Bootstrap. Seeking to leverage my skills and contribute to a
+                            dynamic team.</p>
+                    </section>
+
+
+                    <section class="contact-info">
+                        <div class="heading-style">
+                            <div class="empty"></div>
+                            <h2 contenteditable="true">Contact </h2>
+                            <div class="dash">_____________</div>
+                        </div>
+                        <p>Email: <a href="" contenteditable="true">areebazafar715@gmail.com</a></p>
+                        <p>Phone: <span contenteditable="true">+92345677890</span></p>
+                        <p>LinkedIn: <a href="" target="_blank" contenteditable="true">AreebZafar</a></p>
+                    </section>
+
+                    <section class="skills">
+                        <div class="heading-style">
+                            <div class="empty"></div>
+                            <h2 contenteditable="true">Skills</h2>
+                            <button class="add-btn" id="addSkill">+</button>
+                            <div class="dash"></div>
+                        </div>
+                        <div class="skill-container" id="skillContainer">
+                            <div class="skill-item">
+                                <p contenteditable="true"> TypeScript</p>
+                                <button class="remove-btn">-</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="right-side">
+
+                    <section class="education">
+                        <div class="heading-style">
+                            <div class="education-icon">
+                                <div class="cap">
+                                    <div class="cap-top"></div>
+                                    <div class="cap-bottom"></div>
+                                </div>
+                                <div class="cap-tail"></div>
+                            </div>
+
+                            <div class="empty-right"></div>
+                            <h2 contenteditable="true">Education</h2>
+                            <div class="dash-right">_____________________</div>
+                            <button class="add-btn" id="addEducation">+</button>
+                        </div>
+                        <div class="education-list">
+                            <div class="education-container" id="educationContainer">
+                                <div class="education-item">
+                                    <h3 contenteditable="true">‣ Intermediate in Commerce | 2020 - 2022</h3>
+                                    <p contenteditable="true">• Government College for Women, Korangi 4, Karachi</p>
+                                    <button class="remove-btn">-</button>
+                                </div>   
+                        </div>
+                    </section>
+
+                    <section class="experience">
+                        <div class="heading-style">
+                            <div class="experience-icon">
+                                <div class="handle"></div>
+                                <div class="box"></div>
+                            </div>
+                            <div class="empty-right"></div>
+                            <h2 contenteditable="true">Experience</h2>
+                            <div class="dash-right">____________________</div>
+                            <button class="add-btn" id="addExperience">+</button>
+                        </div>
+                        <div class="exp-item">
+                            <div class="styling">
+                                <div class="experience-container" id="experienceContainer">
+                                    <div class="education-item">
+                                        <h3 contenteditable="true">‣ Front-end Developer Intern | 2023</h3>
+                                            <p contenteditable="true">• XYZ Solutions, Karachi</p>
+                                            <p contenteditable="true">• Contributed to building responsive websites using
+                                                JavaScript, Tailwind CSS, and Bootstrap.</p>
+                                        <button class="remove-btn">-</button>
+                                    </div> 
+                            </div>
+                        </div>
+                    </section>  
+
+                    <section class="projects">
+                        <div class="heading-style">
+                            <div class="projects-icon">
+                                <div class="folder-tab"></div>
+                                <div class="folder-body"></div>
+                            </div>
+                            <div class="empty-right"></div>
+                            <h2 contenteditable="true">Projects</h2>
+                            <div class="dash-right">______________________</div>
+                            <button class="add-btn" id="addProject">+</button>
+                        </div>
+                        <div class="projects-list">
+                            <div class="styling">
+                                <div class="project-container" id="projectContainer">
+                                    <div class="project-item">
+                                        <h3 contenteditable="true">‣ Portfolio Website</h3>
+                                        <p contenteditable="true">• A personal portfolio to showcase web development skills,
+                                            built using Next.js and Tailwind CSS.</p>
+                                            <button class="remove-btn">-</button>
+                                    </div>
+                                    </div>
+                        </div>
+                    </section>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Social Networks Section -->
+            <div class="footer-section social-networks">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://github.com/AreebaZafarChohan/portfolio-next.js.git" target="_blank">Github</a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/areeba-zafar-973917303/?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging_conversation_detail%3BoBeXsi05TJelFMCv%2FLg3Hw%3D%3D"
+                            target="_blank">LinkedIn</a></li>
+                    <li><a href="mailto:areebazafar715@gmail.com" target="_blank">Email</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="templates.html">Templates</a></li>
+                    <li><a href="cvGenerator.html">Generate CV</a></li>
+                </ul>
+            </div>
+
+            <!-- Additional Information Section -->
+            <div class="footer-section additional-info">
+                <h3>Additional Information</h3>
+                <ul>
+                    <li> <a href="#benefits">Benefits of Using QuickCV</a></li>
+                    <li> <a href="#how-it-works">How It Works</a></li>
+                    <li> <a href="#why-choose-us">Why Choose Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 QuickCV | All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
