@@ -135,27 +135,13 @@ document.getElementById("downloadResume")?.addEventListener("click", () => {
               let userName = (document.getElementById('userName') as HTMLElement).textContent?.trim();
               if (userName) {
                   // Create a unique URL based on the user’s name
-                  const resumeUrl = `${window.location.origin}${encodeURIComponent(userName)}`;
+                  const resumeUrl = `${window.location.origin}/${encodeURIComponent(userName)}`;
                   (document.getElementById('resumeLink') as HTMLInputElement).value = resumeUrl;
               } else {
                   alert('Please enter your name');
              }
           });
       });
-
-      function saveContent(): void {
-        const userNameElement = document.getElementById('userName') as HTMLElement;
-        const userName = userNameElement.textContent?.trim();
-        const editableElements = document.querySelectorAll('[contenteditable="true"]');
-        
-        if (userName) {
-            // Combine all editable content and save in localStorage
-            const content = Array.from(editableElements).map(el => el.innerHTML).join('');
-            localStorage.setItem(userName, JSON.stringify(content));
-        } else {
-            alert('Please enter your name before saving.');
-        }
-    }
       
       // Share Resume button to copy the unique link
       document.getElementById('shareResume')?.addEventListener('click', () => {
